@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .card_container {
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #7b3333;
+        }
+        
+
+
+    </style>
+
+</head>
+<body>
+ <div class="card_container">
+
+    <div class="container">
+   <input type="password" id="password" placeholder="Username">
+    <button onclick="submit()" id="btn">submit</button>
+    </div>
+
+ 
+
+
+   
+
+    </div>
+
+    <script>
+
+      const acc = {
+        username: "testuser",
+        password: "123456"
+      }
+
+      const btn = document.getElementById("btn");
+      const container = document.querySelector(".container");
+      const cardContainer = document.querySelector(".card_container");
+        function submit() {
+
+            container.classList.add("card_container");
+            cardContainer.appendChild(container);
+            
+
+            const userpassword = document.getElementById("password").value;
+            if (userpassword === acc.password) {
+            alert("You are logged in");
+            } else {
+            alert("Username is incorrect");
+
+            btn.disabled = true;
+            btn.style.backgroundColor = "red";
+              btn.style.color = "white";
+              btn.innerText = "Disabled";
+              btn.style.cursor = "not-allowed";
+     
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>
