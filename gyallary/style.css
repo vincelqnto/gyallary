@@ -70,7 +70,7 @@
         }
 
         img:hover{
-            transform: scale(1.015);
+             animation: jello-horizontal 0.9s both;
         }
 
         #delete-zone{
